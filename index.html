@@ -24,8 +24,9 @@
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         /* Sticky Top Menu */
@@ -72,13 +73,11 @@
         }
 
         .hero-text {
-            text-align: center;
-            width: 80%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 80px; /* Adjusted spacing for initial view */
+            margin-top: 100px;
         }
 
         .hero-text h1 {
@@ -88,19 +87,18 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-align: center;
-            display: inline-block;
         }
 
         .hero-text p {
             font-size: 1.2rem;
-            margin-top: 10px;
+            margin-top: 20px;
             opacity: 0.8;
         }
 
         .waitlist-button-container {
             width: 100%;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         /* Custom CTA Button Color */
@@ -167,14 +165,13 @@
                 right: 20px;
             }
 
-            /* Place the "Get Early Access" button at the bottom of the page */
+            /* Position the "Get Early Access" button at the bottom on mobile */
             .waitlist-button-container {
                 position: fixed;
                 bottom: 20px;
                 width: 100%;
             }
         }
-
     </style>
 </head>
 <body>
@@ -190,7 +187,7 @@
 
     <!-- Hero Section with Dynamic Background -->
     <div class="hero-text fade-in">
-        <h1 id="typing"></h1>
+        <h1 id="typing">AI-Driven Banner Optimization</h1>
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
     </div>
 
