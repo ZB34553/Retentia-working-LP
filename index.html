@@ -119,51 +119,6 @@
             background: linear-gradient(45deg, #FFD700, #FF8C00);
         }
 
-        /* Process Steps Section */
-        .process-steps {
-            background-color: #1A1A2E;
-            color: white;
-            padding: 30px 0;
-            width: 100%;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 60px; /* Adjust spacing after the hero section */
-        }
-
-        .step-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 20px;
-            max-width: 200px;
-            text-align: center;
-            font-size: 1rem; /* Adjusted font size */
-        }
-
-        .step-container img {
-            width: 50px; /* Adjusted icon size */
-            height: 50px;
-            margin-bottom: 10px;
-            animation: bounce 1s infinite alternate;
-        }
-
-        @keyframes bounce {
-            to {
-                transform: translateY(-5px);
-            }
-        }
-
-        .step-container p {
-            font-size: 1rem;
-            opacity: 0.9;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
         /* Bottom Left Symbol */
         .bottom-left-symbol {
             position: fixed;
@@ -199,16 +154,6 @@
         @media screen and (max-width: 600px) {
             .hero-text h1 {
                 font-size: 2.5rem;
-            }
-
-            .process-steps {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .step-container {
-                font-size: 0.9rem;
-                max-width: 100%;
             }
 
             .cta-button {
@@ -254,22 +199,6 @@
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
             Get Early Access 🚀
         </button>
-    </div>
-
-    <!-- Process Steps Section -->
-    <div class="process-steps">
-        <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/plug.png" alt="Connect Store Icon">
-            <p><strong>1. Connect Your Shopify Store</strong><br>Seamlessly integrate with your store to get started.</p>
-        </div>
-        <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/upload.png" alt="Upload Icon">
-            <p><strong>2. Upload Your Banners</strong><br>Simply drag and drop the images you want to test.</p>
-        </div>
-        <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/rocket.png" alt="Rocket Icon">
-            <p><strong>3. Watch Your Conversions Skyrocket</strong><br>Let AI optimize your banners automatically and boost conversions.</p>
-        </div>
     </div>
 
     <!-- Join Waitlist Modal -->
