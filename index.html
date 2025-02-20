@@ -135,8 +135,8 @@
         /* Contact link */
         .contact-link {
             position: fixed;
-            bottom: 10px;
-            right: 10px; /* Adjust to the right side */
+            bottom: 20px;
+            right: 20px; /* Adjust to the right side */
             font-size: 1rem; /* Slightly bigger font for visibility */
             color: white;
             font-weight: bold;
@@ -175,7 +175,7 @@
                 font-size: 0.9rem;
                 bottom: 20px;
                 right: 20px;
-                padding: 12px 20px; /* Adjust padding for mobile */
+                padding: 12px 20px;
             }
 
             /* Position the "Get Early Access" button at the bottom on mobile */
@@ -198,6 +198,10 @@
     <!-- Sticky Navigation Bar -->
     <header class="sticky-header">
         <h1 class="logo">Retentia</h1>
+        <!-- Join Waitlist on Top Right -->
+        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
+            Join Waitlist
+        </button>
     </header>
 
     <!-- Hero Section with Dynamic Background -->
@@ -206,14 +210,7 @@
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
     </div>
 
-    <!-- Join Waitlist at Bottom -->
-    <div class="waitlist-button-container">
-        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
-            Join Waitlist
-        </button>
-    </div>
-
-    <!-- Join Waitlist Modal -->
+    <!-- Join Waitlist Modal (removed central button) -->
     <div id="waitlist-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
             <h2 class="text-2xl font-bold text-orange-600">Join the Waitlist</h2>
