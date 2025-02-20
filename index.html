@@ -2,107 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Retentia - Magical AI Optimization</title>
+    <title>Retentia - AI-Powered Banner Testing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Retentia uses invisible AI to optimize homepage banners and layouts for you.">
-    <meta name="keywords" content="AI Optimization, Banner Testing, Magic, Retentia">
+    <meta name="description" content="Retentia automates homepage banner testing to maximize conversions with AI.">
+    <meta name="keywords" content="A/B Testing, AI Optimization, Retentia, Banner Testing">
     <meta name="author" content="Your Name">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <style>
-        /* General Styling */
+        /* Fullscreen Dynamic Background */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            background: #1E1E2F; /* Dark background */
+            background: #1A1A2E; /* Dark background */
             color: white;
-            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            overflow: hidden;
-            transition: background 0.5s ease, color 0.5s ease;
+            position: relative;
         }
 
-        /* Hero Section */
+        /* Sticky Top Menu */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Fade-in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn ease-out 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero Text */
         .hero-text {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin-top: 80px;
-            animation: fadeIn 2s ease-out;
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            background: -webkit-linear-gradient(45deg, #FFD700, #FF8C00);
+            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-align: center;
             margin: 0;
             padding: 0;
-            transition: transform 0.3s ease, color 0.5s ease;
-        }
-
-        .hero-text h1:hover {
-            transform: scale(1.05);
-            color: #FF8C00; /* Subtle hover effect */
         }
 
         .hero-text p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-top: 20px;
             opacity: 0.8;
-            transition: opacity 0.3s ease;
         }
 
-        .hero-text p:hover {
-            opacity: 1;
-        }
-
-        /* Invisible AI Magic Animation (Background and subtle effects) */
-        .magic-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            pointer-events: none;
-            z-index: -1;
-            animation: pulseEffect 8s infinite ease-in-out;
-        }
-
-        @keyframes pulseEffect {
-            0% { background: rgba(255, 255, 255, 0.05); }
-            50% { background: rgba(255, 255, 255, 0.1); }
-            100% { background: rgba(255, 255, 255, 0.05); }
-        }
-
-        /* Button Styles */
+        /* Custom CTA Button Color */
         .cta-button {
-            background: -webkit-linear-gradient(45deg, #FFD700, #FF8C00);
-            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
+            background: linear-gradient(45deg, #FF8C00, #FFD700);
             color: white;
             font-weight: bold;
-            border-radius: 50px;
-            padding: 15px 30px;
+            border-radius: 8px;
+            padding: 12px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            cursor: pointer;
-            border: none;
-            margin-top: 20px;
+            transition: background 0.3s ease;
         }
 
         .cta-button:hover {
-            transform: scale(1.1); /* Subtle button hover effect */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(45deg, #FF8C00, #FFD700); /* Slight color shift */
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
         }
 
         /* Bottom Left Symbol */
@@ -128,29 +129,21 @@
             font-weight: bold;
             text-decoration: none;
             background: #FF8C00;
-            padding: 12px 20px;
+            padding: 15px 25px;
             border-radius: 50px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.3s ease, background 0.3s ease;
         }
 
         .contact-link:hover {
             background: #FFD700;
-            transform: scale(1.05);
         }
 
         .contact-link::after {
             content: '💬';
             margin-left: 10px;
-        }
-
-        /* Animation for Hero text */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
 
         /* Mobile responsive styling */
@@ -164,6 +157,7 @@
                 font-size: 1rem;
             }
 
+            /* Position the "Wanna talk?" link */
             .contact-link {
                 font-size: 0.9rem;
                 bottom: 20px;
@@ -186,14 +180,21 @@
     </style>
 </head>
 <body>
-    <div class="magic-background"></div>
+    <!-- Particle.js Background for Moving Stars -->
+    <div id="particles-js"></div>
 
-    <div class="hero-text">
-        <h1 id="greeting">Welcome to Retentia</h1>
-        <p>Your homepage optimization magic, powered by invisible AI.</p>
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky-header">
+        <h1 class="logo">Retentia</h1>
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
-            Experience the Magic
+            Join Waitlist
         </button>
+    </header>
+
+    <!-- Hero Section with Dynamic Background -->
+    <div class="hero-text fade-in">
+        <h1 id="typing"></h1>
+        <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
     </div>
 
     <!-- Join Waitlist Modal -->
@@ -218,33 +219,103 @@
         © Retentia
     </div>
 
-    <!-- Contact Link -->
+    <!-- Contact Link (Wanna talk?) -->
     <a href="mailto:Zachariababecoff@gmail.com" class="contact-link">
         Wanna talk?
     </a>
 
     <script>
-        // Time-based Personalized Greeting
-        function getGreeting() {
-            const now = new Date();
-            const hours = now.getHours();
-            let greeting;
-
-            if (hours >= 5 && hours < 12) {
-                greeting = "Good Morning";
-            } else if (hours >= 12 && hours < 18) {
-                greeting = "Good Afternoon";
-            } else {
-                greeting = "Good Evening";
+        /* Typing Effect */
+        const text = "AI-Driven Banner Optimization";
+        let i = 0;
+        function typeEffect() {
+            const typingElement = document.getElementById("typing");
+            if (i < text.length) {
+                typingElement.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 100);
             }
-
-            document.getElementById('greeting').innerText = `${greeting}, Visitor!`;
         }
 
         window.onload = function() {
-            getGreeting(); // Run the greeting function on page load
-            particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.json', function() {
-                console.log('Particles.js loaded');
+            typeEffect(); // Start typing effect once window loads
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 150,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: "#ffffff"
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        },
+                        polygon: {
+                            nb_sides: 6
+                        }
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 4,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#ffffff",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 6,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200
+                        }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        }
+                    }
+                }
             });
         };
     </script>
