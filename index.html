@@ -123,13 +123,14 @@
         .process-steps {
             background-color: #1A1A2E;
             color: white;
-            padding: 50px 0;
+            padding: 30px 0;
             width: 100%;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            margin-top: 100px; /* Adds space between hero section and steps */
         }
 
         .step-container {
@@ -137,26 +138,27 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin: 20px;
-            max-width: 200px;
+            margin: 10px;
+            max-width: 150px;
             text-align: center;
+            font-size: 0.9rem; /* Reduced font size */
         }
 
         .step-container img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
+            width: 50px; /* Reduced size of icons */
+            height: 50px;
+            margin-bottom: 10px;
             animation: bounce 1s infinite alternate;
         }
 
         @keyframes bounce {
             to {
-                transform: translateY(-10px);
+                transform: translateY(-5px);
             }
         }
 
         .step-container p {
-            font-size: 1.1rem;
+            font-size: 1rem; /* Reduced text size */
             opacity: 0.9;
         }
 
@@ -220,15 +222,15 @@
     <!-- Process Steps Section -->
     <div class="process-steps">
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/plug.png" alt="Connect Store Icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/plug.png" alt="Connect Store Icon">
             <p><strong>1. Connect Your Shopify Store</strong><br>Seamlessly integrate with your store to get started.</p>
         </div>
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/drag.png" alt="Drag and Drop Icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/upload.png" alt="Upload Icon"> <!-- Fixed the animated logo -->
             <p><strong>2. Upload Your Banners</strong><br>Simply drag and drop the images you want to test.</p>
         </div>
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/rocket.png" alt="Rocket Icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/rocket.png" alt="Rocket Icon">
             <p><strong>3. Watch Your Conversions Skyrocket</strong><br>Let AI optimize your banners automatically and boost conversions.</p>
         </div>
     </div>
