@@ -8,9 +8,6 @@
     <meta name="keywords" content="A/B Testing, AI Optimization, Retentia, Banner Testing">
     <meta name="author" content="Your Name">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <style>
@@ -19,7 +16,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: linear-gradient(135deg, #1A1A2E, #16213E);
+            background: linear-gradient(135deg, #FFB6C1, #ADD8E6); /* Initial pastel background */
             color: white;
             overflow-x: hidden;
             display: flex;
@@ -27,6 +24,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            transition: background 1s ease;
         }
 
         /* Sticky Top Menu */
@@ -124,11 +122,11 @@
             position: fixed;
             bottom: 10px;
             left: 10px;
-            font-size: 0.8rem; /* Smaller font size */
+            font-size: 0.8rem;
             color: #FF8C00;
             font-weight: bold;
             background: rgba(0, 0, 0, 0.5);
-            padding: 8px 12px; /* Smaller padding */
+            padding: 8px 12px;
             border-radius: 5px;
         }
 
@@ -136,13 +134,13 @@
         .contact-link {
             position: fixed;
             bottom: 20px;
-            right: 20px; /* Adjust to the right side */
-            font-size: 1rem; /* Slightly bigger font for visibility */
+            right: 20px;
+            font-size: 1rem;
             color: white;
             font-weight: bold;
             text-decoration: none;
             background: #FF8C00;
-            padding: 15px 25px; 
+            padding: 15px 25px;
             border-radius: 50px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             display: flex;
@@ -152,11 +150,6 @@
 
         .contact-link:hover {
             background: #FFD700;
-        }
-
-        .contact-link::after {
-            content: '💬';
-            margin-left: 10px;
         }
 
         /* Mobile responsive styling */
@@ -170,7 +163,6 @@
                 font-size: 1rem;
             }
 
-            /* Position the "Wanna talk?" link */
             .contact-link {
                 font-size: 0.9rem;
                 bottom: 20px;
@@ -194,7 +186,7 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    
+
     <!-- Sticky Navigation Bar -->
     <header class="sticky-header">
         <h1 class="logo">Retentia</h1>
@@ -205,12 +197,12 @@
     </header>
 
     <!-- Hero Section with Dynamic Background -->
-    <div class="hero-text fade-in">
+    <div class="hero-text">
         <h1 id="typing"></h1>
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
     </div>
 
-    <!-- Join Waitlist Modal (removed central button) -->
+    <!-- Join Waitlist Modal -->
     <div id="waitlist-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
             <h2 class="text-2xl font-bold text-orange-600">Join the Waitlist</h2>
@@ -238,7 +230,7 @@
     </a>
 
     <script>
-        /* Typing Effect */
+        // Typing Effect for Hero Text
         const text = "AI-Driven Banner Optimization";
         let i = 0;
         function typeEffect() {
@@ -249,6 +241,22 @@
                 setTimeout(typeEffect, 100);
             }
         }
+
+        // Pastel Color Palette
+        const pastelColors = [
+            "#FFB6C1", // Pastel Pink
+            "#ADD8E6", // Pastel Blue
+            "#FFB347", // Pastel Orange
+            "#B0E57C", // Pastel Green
+            "#F5B7B1", // Pastel Red
+            "#D6AEDD"  // Pastel Purple
+        ];
+
+        // Function to change background color dynamically
+        document.body.addEventListener('click', () => {
+            const randomColor = pastelColors[Math.floor(Math.random() * pastelColors.length)];
+            document.body.style.background = `linear-gradient(135deg, ${randomColor}, #16213E)`;
+        });
 
         window.onload = function() {
             typeEffect(); // Start typing effect once window loads
