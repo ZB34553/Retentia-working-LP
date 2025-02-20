@@ -22,6 +22,10 @@
             background: linear-gradient(135deg, #1A1A2E, #16213E);
             color: white;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Sticky Top Menu */
@@ -67,10 +71,6 @@
         }
 
         .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
             width: 80%;
         }
@@ -81,12 +81,21 @@
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-align: center;
+            display: inline-block;
         }
 
         .hero-text p {
             font-size: 1.5rem;
             margin-top: 10px;
             opacity: 0.8;
+        }
+
+        .waitlist-button-container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
@@ -96,7 +105,7 @@
     <!-- Sticky Navigation Bar -->
     <header class="sticky-header">
         <h1 class="logo">Retentia</h1>
-        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="bg-white text-orange-600 px-5 py-2 rounded-md font-bold shadow-md">
+        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class=\"bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-5 py-2 rounded-md font-bold shadow-md\">
             Join Waitlist
         </button>
     </header>
@@ -108,8 +117,8 @@
     </div>
 
     <!-- Join Waitlist at Bottom -->
-    <div class="text-center mt-16 fade-in">
-        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="bg-white text-orange-600 px-6 py-3 rounded-md font-bold text-lg shadow-md">
+    <div class="waitlist-button-container">
+        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class=\"bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-6 py-3 rounded-md font-bold text-lg shadow-md\">
             Get Early Access 🚀
         </button>
     </div>
@@ -133,7 +142,7 @@
 
     <script>
         /* Typing Effect */
-        const text = "AI-Powered Homepage Optimization";
+        const text = "AI-Driven Banner Optimization";
         let i = 0;
         function typeEffect() {
             if (i < text.length) {
