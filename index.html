@@ -77,7 +77,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 80px; /* Adjusted spacing for initial view */
+            margin-top: 80px;
         }
 
         .hero-text h1 {
@@ -189,7 +189,7 @@
 
     <!-- Hero Section with Dynamic Background -->
     <div class="hero-text fade-in">
-        <h1 id="typing">AI-Driven Banner Optimization</h1>
+        <h1 id="typing"></h1>
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
     </div>
 
@@ -232,15 +232,16 @@
         const text = "AI-Driven Banner Optimization";
         let i = 0;
         function typeEffect() {
+            const typingElement = document.getElementById("typing");
             if (i < text.length) {
-                document.getElementById("typing").innerHTML += text.charAt(i);
+                typingElement.innerHTML += text.charAt(i);
                 i++;
                 setTimeout(typeEffect, 100);
             }
         }
 
         window.onload = function() {
-            typeEffect();
+            typeEffect(); // Start typing effect once window loads
             particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.json', function() {
                 console.log('Particles.js loaded');
             });
