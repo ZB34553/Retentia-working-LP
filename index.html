@@ -97,14 +97,10 @@
             opacity: 0.8;
         }
 
-        /* Button container adjustments */
         .waitlist-button-container {
             width: 100%;
             text-align: center;
             margin-top: 30px;
-            position: fixed;
-            bottom: 20px;
-            z-index: 100;
         }
 
         /* Custom CTA Button Color */
@@ -117,7 +113,6 @@
             padding: 12px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease;
-            width: 100%;
         }
 
         .cta-button:hover {
@@ -129,25 +124,25 @@
             position: fixed;
             bottom: 10px;
             left: 10px;
-            font-size: 1rem;
+            font-size: 0.8rem; /* Smaller font size */
             color: #FF8C00;
             font-weight: bold;
             background: rgba(0, 0, 0, 0.5);
-            padding: 10px 15px;
+            padding: 8px 12px; /* Smaller padding */
             border-radius: 5px;
         }
 
         /* Contact link at bottom right */
         .contact-link {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            font-size: 1rem;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.8rem; /* Smaller font size */
             color: #FF8C00;
             font-weight: bold;
             text-decoration: none;
             background: rgba(0, 0, 0, 0.5);
-            padding: 10px 15px;
+            padding: 8px 12px; /* Smaller padding */
             border-radius: 5px;
         }
 
@@ -164,20 +159,24 @@
             .cta-button {
                 padding: 12px 15px;
                 font-size: 1rem;
-                width: 100%; /* Ensure button takes full width */
             }
 
             .contact-link {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 bottom: 20px;
                 right: 20px;
             }
 
-            /* "Get Early Access" button stays fixed to the bottom */
+            /* Position the "Get Early Access" button at the bottom on mobile */
             .waitlist-button-container {
                 position: fixed;
                 bottom: 20px;
                 width: 100%;
+            }
+
+            .bottom-left-symbol {
+                font-size: 0.7rem; /* Smaller font size on mobile */
+                padding: 6px 10px; /* Smaller padding */
             }
         }
     </style>
@@ -195,7 +194,7 @@
 
     <!-- Hero Section with Dynamic Background -->
     <div class="hero-text fade-in">
-        <h1 id="typing">AI-Driven Banner Optimization</h1>
+        <h1 id="typing"></h1>
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
     </div>
 
