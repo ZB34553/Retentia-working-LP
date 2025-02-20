@@ -47,16 +47,6 @@
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Butterfly Logo */
-        .butterfly-logo {
-            width: 30px;
-            height: 30px;
-            margin-left: 10px;
-            fill: url(#gradient); /* Gradient fill from the site colors */
         }
 
         /* Fade-in animations */
@@ -80,7 +70,6 @@
             z-index: -1;
         }
 
-        /* Hero Text */
         .hero-text {
             display: flex;
             flex-direction: column;
@@ -202,15 +191,6 @@
     <!-- Sticky Navigation Bar -->
     <header class="sticky-header">
         <h1 class="logo">
-            <svg class="butterfly-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#FF8C00;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <path d="M50,10 C60,30 80,40 70,60 C60,80 50,90 40,80 C30,70 30,60 40,50 C30,40 30,30 50,10" />
-            </svg>
             Retentia
         </h1>
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
@@ -266,8 +246,83 @@
 
         window.onload = function() {
             typeEffect(); // Start typing effect once window loads
-            particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.json', function() {
-                console.log('Particles.js loaded');
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 100, // Reduced number for better mobile responsiveness
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: "#ffffff"
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        },
+                        polygon: {
+                            nb_sides: 6
+                        }
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 4, // Adjusted size for better mobile responsiveness
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 4,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#ffffff",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 6,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200
+                        }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        }
+                    }
+                }
             });
         };
     </script>
