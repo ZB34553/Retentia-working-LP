@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Retentia - AI-Powered Banner Testing</title>
+    <title>Retentia - Magic Powered Homepage Optimization</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Retentia automates homepage banner testing to maximize conversions with AI.">
-    <meta name="keywords" content="A/B Testing, AI Optimization, Retentia, Banner Testing">
+    <meta name="description" content="Retentia uses magical, invisible AI to optimize homepage banners and layouts for you. Let the magic work in the background.">
+    <meta name="keywords" content="AI Optimization, Banner Testing, Magic, Retentia, Homepage Optimization">
     <meta name="author" content="Your Name">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +16,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: linear-gradient(135deg, #FFB6C1, #ADD8E6); /* Pastel gradient */
+            background: linear-gradient(135deg, #5A2D8D, #3D8B7A); /* Mystical dark background */
             color: white;
             font-family: 'Arial', sans-serif;
             overflow-x: hidden;
@@ -25,7 +25,13 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            transition: background 1s ease, color 1s ease; /* Smooth background transition */
+            position: relative;
+            transition: background 1s ease;
+        }
+
+        /* Magical Glowing Effect */
+        .glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
         }
 
         /* Hero Text Styling */
@@ -39,7 +45,7 @@
         }
 
         .hero-text h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: bold;
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             -webkit-background-clip: text;
@@ -48,15 +54,16 @@
             margin: 0;
             padding: 0;
             transition: transform 0.3s ease, color 0.5s ease;
+            color: #FFD700;
         }
 
         .hero-text h1:hover {
-            transform: scale(1.1) rotate(5deg); /* Text hover effect */
+            transform: scale(1.1) rotate(5deg);
             color: #FF8C00;
         }
 
         .hero-text p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-top: 20px;
             opacity: 0.8;
             transition: opacity 0.3s ease;
@@ -66,23 +73,53 @@
             opacity: 1;
         }
 
-        /* Button Styles */
+        /* Magic Button Styles */
         .cta-button {
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             background: linear-gradient(45deg, #FF8C00, #FFD700);
             color: white;
             font-weight: bold;
-            border-radius: 8px;
-            padding: 12px 20px;
+            border-radius: 50px;
+            padding: 20px 40px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             cursor: pointer;
         }
 
         .cta-button:hover {
-            transform: scale(1.05); /* Button hover effect */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1); /* Button hover effect */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, #FFD700, #FF8C00); /* Button color shift */
+        }
+
+        /* Magic Background Animation */
+        .background-animate {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            pointer-events: none;
+            z-index: -1;
+            animation: backgroundAnimation 15s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #FFB6C1, #ADD8E6); }
+            50% { background: linear-gradient(135deg, #A1C4FD, #FFB2E6); }
+            100% { background: linear-gradient(135deg, #FFB6C1, #ADD8E6); }
+        }
+
+        /* Floating Element Effect */
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
         }
 
         /* Bottom Left Symbol */
@@ -127,22 +164,6 @@
             margin-left: 10px;
         }
 
-        /* Background Effect: Interactive Dynamic */
-        body {
-            cursor: pointer;
-            transition: background 0.5s ease;
-        }
-
-        body:active {
-            background: linear-gradient(135deg, #FFB6C1, #ADD8E6);
-        }
-
-        /* Animation for Hero text */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
         /* Mobile responsive styling */
         @media screen and (max-width: 600px) {
             .hero-text h1 {
@@ -178,20 +199,19 @@
 <body>
     <div id="particles-js"></div>
 
-    <!-- Sticky Navigation Bar -->
-    <header class="sticky-header">
-        <h1 class="logo">Retentia</h1>
-        <!-- Join Waitlist on Top Right -->
-        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
-            Join Waitlist
-        </button>
-    </header>
+    <!-- Dynamic Magic Background Animation -->
+    <div class="background-animate"></div>
 
-    <!-- Hero Section with Dynamic Background -->
+    <!-- Hero Section with Magical Effects -->
     <div class="hero-text">
-        <h1 id="greeting"></h1>
-        <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
+        <h1 class="glow" id="typing"></h1>
+        <p>Retentia uses magical, invisible AI to optimize homepage banners and layouts for you. Let the magic work in the background.</p>
     </div>
+
+    <!-- Magic Button -->
+    <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button floating">
+        Experience the Magic
+    </button>
 
     <!-- Join Waitlist Modal -->
     <div id="waitlist-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
@@ -221,28 +241,20 @@
     </a>
 
     <script>
-        // Time-based Personalized Greeting
-        function getGreeting() {
-            const now = new Date();
-            const hours = now.getHours();
-            let greeting;
-
-            if (hours >= 5 && hours < 12) {
-                greeting = "Good Morning";
-            } else if (hours >= 12 && hours < 18) {
-                greeting = "Good Afternoon";
-            } else {
-                greeting = "Good Evening";
+        // Typing Effect for Hero Text
+        const text = "AI-Driven Magic Homepage Optimization";
+        let i = 0;
+        function typeEffect() {
+            const typingElement = document.getElementById("typing");
+            if (i < text.length) {
+                typingElement.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 100);
             }
-
-            // Customizing the greeting based on user location or session could be added here
-            const userName = "Visitor"; // Optionally, pull from a session or cookie
-
-            document.getElementById('greeting').innerText = `${greeting}, ${userName}!`;
         }
 
         window.onload = function() {
-            getGreeting(); // Run the greeting function on page load
+            typeEffect(); // Start typing effect once window loads
             particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.json', function() {
                 console.log('Particles.js loaded');
             });
