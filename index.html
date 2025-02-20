@@ -61,15 +61,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
+        /* Hero Section */
         .hero-text {
             display: flex;
             flex-direction: column;
@@ -182,6 +174,17 @@
                 padding: 6px 10px;
             }
         }
+
+        /* Particle Container for Stars */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 400px; /* Set this height to limit the area of particles to the banner */
+            z-index: -1;
+        }
+
     </style>
 </head>
 <body>
@@ -190,9 +193,7 @@
 
     <!-- Sticky Navigation Bar -->
     <header class="sticky-header">
-        <h1 class="logo">
-            Retentia
-        </h1>
+        <h1 class="logo">Retentia</h1>
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
             Join Waitlist
         </button>
@@ -249,7 +250,7 @@
             particlesJS('particles-js', {
                 particles: {
                     number: {
-                        value: 100, // Reduced number for better mobile responsiveness
+                        value: 100,
                         density: {
                             enable: true,
                             value_area: 800
@@ -279,7 +280,7 @@
                         }
                     },
                     size: {
-                        value: 4, // Adjusted size for better mobile responsiveness
+                        value: 3,
                         random: true,
                         anim: {
                             enable: false,
