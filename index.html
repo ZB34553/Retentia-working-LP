@@ -56,6 +56,7 @@
             transform: translateY(20px);
             animation: fadeIn ease-out 1s forwards;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -77,11 +78,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 40px; /* Space added for better visibility */
         }
 
         .hero-text h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bold;
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             -webkit-background-clip: text;
@@ -91,16 +92,15 @@
         }
 
         .hero-text p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-top: 10px;
             opacity: 0.8;
         }
 
         .waitlist-button-container {
-            position: absolute;
-            bottom: 20px;
             width: 100%;
             text-align: center;
+            margin-top: 20px;
         }
 
         /* Custom CTA Button Color */
@@ -130,7 +130,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            margin-top: 100px; /* Adds space between hero section and steps */
+            margin-top: 100px; /* Added margin top for better positioning */
         }
 
         .step-container {
@@ -141,13 +141,13 @@
             margin: 20px;
             max-width: 200px;
             text-align: center;
-            font-size: 1rem; /* Reduced font size */
+            font-size: 1rem; /* Adjusted font size */
         }
 
         .step-container img {
-            width: 60px; /* Adjusted size of icons */
-            height: 60px;
-            margin-bottom: 15px;
+            width: 50px; /* Adjusted icon size */
+            height: 50px;
+            margin-bottom: 10px;
             animation: bounce 1s infinite alternate;
         }
 
@@ -158,9 +158,10 @@
         }
 
         .step-container p {
-            font-size: 1rem; /* Adjusted text size */
+            font-size: 1rem;
             opacity: 0.9;
-            font-weight: bold; /* Aligned titles for better visibility */
+            font-weight: bold;
+            margin-top: 10px;
         }
 
         /* Bottom Left Symbol */
@@ -194,6 +195,34 @@
             color: #FFD700;
         }
 
+        /* Mobile responsive styling */
+        @media screen and (max-width: 600px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step-container {
+                font-size: 0.9rem;
+                max-width: 100%;
+            }
+
+            .cta-button {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+
+            .contact-link {
+                font-size: 0.9rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -223,15 +252,15 @@
     <!-- Process Steps Section -->
     <div class="process-steps">
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/plug.png" alt="Connect Store Icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/plug.png" alt="Connect Store Icon">
             <p><strong>1. Connect Your Shopify Store</strong><br>Seamlessly integrate with your store to get started.</p>
         </div>
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/upload.png" alt="Upload Icon"> <!-- Fixed the animated logo -->
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/upload.png" alt="Upload Icon">
             <p><strong>2. Upload Your Banners</strong><br>Simply drag and drop the images you want to test.</p>
         </div>
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/60/ffffff/rocket.png" alt="Rocket Icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/rocket.png" alt="Rocket Icon">
             <p><strong>3. Watch Your Conversions Skyrocket</strong><br>Let AI optimize your banners automatically and boost conversions.</p>
         </div>
     </div>
