@@ -24,7 +24,7 @@
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
 
@@ -78,7 +78,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 40px; /* Space added for better visibility */
+            margin-top: 80px; /* Adjusted spacing for initial view */
         }
 
         .hero-text h1 {
@@ -130,7 +130,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            margin-top: 100px; /* Added margin top for better positioning */
+            margin-top: 60px; /* Adjust spacing after the hero section */
         }
 
         .step-container {
@@ -221,6 +221,13 @@
                 bottom: 20px;
                 right: 20px;
             }
+
+            /* Place the "Get Early Access" button at the bottom of the page */
+            .waitlist-button-container {
+                position: fixed;
+                bottom: 20px;
+                width: 100%;
+            }
         }
 
     </style>
@@ -252,15 +259,15 @@
     <!-- Process Steps Section -->
     <div class="process-steps">
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/plug.png" alt="Connect Store Icon">
+            <img src="https://img.icons8.com/ios-filled/60/ffffff/plug.png" alt="Connect Store Icon">
             <p><strong>1. Connect Your Shopify Store</strong><br>Seamlessly integrate with your store to get started.</p>
         </div>
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/upload.png" alt="Upload Icon">
+            <img src="https://img.icons8.com/ios-filled/60/ffffff/upload.png" alt="Upload Icon">
             <p><strong>2. Upload Your Banners</strong><br>Simply drag and drop the images you want to test.</p>
         </div>
         <div class="step-container">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/rocket.png" alt="Rocket Icon">
+            <img src="https://img.icons8.com/ios-filled/60/ffffff/rocket.png" alt="Rocket Icon">
             <p><strong>3. Watch Your Conversions Skyrocket</strong><br>Let AI optimize your banners automatically and boost conversions.</p>
         </div>
     </div>
