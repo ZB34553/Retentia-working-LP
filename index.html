@@ -118,6 +118,52 @@
         .cta-button:hover {
             background: linear-gradient(45deg, #FFD700, #FF8C00);
         }
+
+        /* Process Steps Section */
+        .process-steps {
+            background-color: #1A1A2E;
+            color: white;
+            padding: 50px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .process-steps h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .step-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+            max-width: 400px;
+        }
+
+        .step-container img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        .step-container p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
     </style>
 </head>
 <body>
@@ -142,6 +188,23 @@
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
             Get Early Access 🚀
         </button>
+    </div>
+
+    <!-- Process Steps Section -->
+    <div class="process-steps">
+        <h2>How It Works</h2>
+        <div class="step-container">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/plug.png" alt="Connect Store Icon">
+            <p><strong>1. Connect Your Shopify Store</strong><br>Seamlessly integrate with your store to get started.</p>
+        </div>
+        <div class="step-container">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/drag.png" alt="Drag and Drop Icon">
+            <p><strong>2. Upload Your Banners</strong><br>Simply drag and drop the images you want to test.</p>
+        </div>
+        <div class="step-container">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/rocket.png" alt="Rocket Icon">
+            <p><strong>3. Watch Your Conversions Skyrocket</strong><br>Let AI optimize your banners automatically and boost conversions.</p>
+        </div>
     </div>
 
     <!-- Join Waitlist Modal -->
