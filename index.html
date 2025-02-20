@@ -132,22 +132,32 @@
             border-radius: 5px;
         }
 
-        /* Contact link at bottom right */
+        /* Contact link bubble styling */
         .contact-link {
             position: fixed;
-            bottom: 10px;
-            right: 10px; /* Moved to the right side */
-            font-size: 0.8rem; /* Smaller font size */
-            color: #FF8C00;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1rem; /* Slightly bigger text for better visibility */
+            color: white;
             font-weight: bold;
             text-decoration: none;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 8px 12px; /* Smaller padding */
-            border-radius: 5px;
+            background: #FF8C00;
+            padding: 15px 25px; 
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transform: rotate(10deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .contact-link:hover {
-            color: #FFD700;
+            background: #FFD700;
+        }
+
+        .contact-link::after {
+            content: '💬';
+            margin-left: 10px;
         }
 
         /* Mobile responsive styling */
@@ -162,9 +172,10 @@
             }
 
             .contact-link {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
                 bottom: 20px;
-                right: 10px; /* Keep on the bottom-right */
+                right: 20px;
+                padding: 12px 20px; /* Adjust padding for mobile */
             }
 
             /* Position the "Get Early Access" button at the bottom on mobile */
@@ -227,7 +238,7 @@
         © Retentia
     </div>
 
-    <!-- Contact Link -->
+    <!-- Contact Link (Speech Bubble) -->
     <a href="mailto:Zachariababecoff@gmail.com" class="contact-link">
         Wanna talk?
     </a>
