@@ -132,12 +132,12 @@
             border-radius: 5px;
         }
 
-        /* Contact link bubble styling */
+        /* Contact link */
         .contact-link {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            font-size: 1rem; /* Slightly bigger text for better visibility */
+            bottom: 10px;
+            right: 10px; /* Adjust to the right side */
+            font-size: 1rem; /* Slightly bigger font for visibility */
             color: white;
             font-weight: bold;
             text-decoration: none;
@@ -145,7 +145,6 @@
             padding: 15px 25px; 
             border-radius: 50px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transform: rotate(10deg);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -171,6 +170,7 @@
                 font-size: 1rem;
             }
 
+            /* Position the "Wanna talk?" link */
             .contact-link {
                 font-size: 0.9rem;
                 bottom: 20px;
@@ -198,9 +198,6 @@
     <!-- Sticky Navigation Bar -->
     <header class="sticky-header">
         <h1 class="logo">Retentia</h1>
-        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
-            Join Waitlist
-        </button>
     </header>
 
     <!-- Hero Section with Dynamic Background -->
@@ -212,7 +209,7 @@
     <!-- Join Waitlist at Bottom -->
     <div class="waitlist-button-container">
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
-            Get Early Access 🚀
+            Join Waitlist
         </button>
     </div>
 
@@ -238,7 +235,7 @@
         © Retentia
     </div>
 
-    <!-- Contact Link (Speech Bubble) -->
+    <!-- Contact Link (Wanna talk?) -->
     <a href="mailto:Zachariababecoff@gmail.com" class="contact-link">
         Wanna talk?
     </a>
