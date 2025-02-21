@@ -155,8 +155,11 @@
             background: rgba(0, 0, 0, 0.8);
             padding: 40px;
             border-radius: 10px;
-            max-width: 600px;
+            max-width: 800px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
 
         .about-us-modal h2 {
@@ -171,6 +174,20 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 20px;
+        }
+
+        .founder-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .founder-info img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
 
         .close-modal {
@@ -248,13 +265,15 @@
             .email-input-container {
                 width: 100%;
             }
-        }
 
-        /* Custom Styling for the Join Waitlist Modal Title */
-        #waitlist-modal .text-2xl {
-            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            .founder-info {
+                flex-direction: column;
+            }
+
+            .founder-info img {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
@@ -285,6 +304,16 @@
     <div id="about-us-modal" class="about-us-modal">
         <div class="about-us-modal-content">
             <h2>Meet the Founders</h2>
+            <div class="founder-info">
+                <div>
+                    <img src="https://via.placeholder.com/150" alt="Tom's picture">
+                    <p><strong>Tom</strong><br>AI Engineer from Oxford University</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150" alt="Zac's picture">
+                    <p><strong>Zac</strong><br>Optimized thousands of e-commerce stores</p>
+                </div>
+            </div>
             <p>Tom, an AI engineer from Oxford University, brings an in-depth understanding of artificial intelligence. Zac has spent the last three years overseeing and optimizing thousands of online e-commerce stores through his previous startup. Combining their expertise, they founded Retentia to revolutionize banner optimization with AI.</p>
             <button class="close-modal" onclick="closeAboutUs()">Close</button>
         </div>
