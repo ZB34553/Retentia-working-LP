@@ -249,6 +249,13 @@
                 width: 100%;
             }
         }
+
+        /* Custom Styling for the Join Waitlist Modal Title */
+        #waitlist-modal .text-2xl {
+            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body>
@@ -286,7 +293,7 @@
     <!-- Join Waitlist Modal -->
     <div id="waitlist-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
-            <h2 class="text-2xl font-bold text-orange-600">Join the Waitlist</h2>
+            <h2 class="text-2xl font-bold">Join the Waitlist</h2> <!-- Updated color -->
             <p class="mt-2 text-gray-700">Secure your spot now and gain early access benefits!</p>
             <form action="https://formsubmit.co/zachariababecoff@gmail.com" method="POST" class="mt-4">
                 <input type="email" name="email" required placeholder="Enter your email" class="p-3 border rounded-md w-full text-gray-900 text-lg">
