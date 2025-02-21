@@ -7,24 +7,24 @@
     <meta name="description" content="Retentia automates homepage banner testing to maximize conversions with AI.">
     <meta name="keywords" content="A/B Testing, AI Optimization, Retentia, Banner Testing">
     <meta name="author" content="Your Name">
-    
+
     <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '651792270580399');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=651792270580399&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '651792270580399');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=651792270580399&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
@@ -335,6 +335,16 @@
         function closeAboutUs() {
             document.getElementById('about-us-modal').style.display = 'none';
         }
+
+        // Track when users click the "Join Waitlist" widget
+        document.getElementById("join-waitlist-widget").addEventListener("click", function() {
+            fbq('track', 'Lead');  // Track the Lead event when the widget is clicked
+        });
+
+        // Facebook Pixel Event on Waitlist Form Submission
+        document.getElementById("waitlistForm").addEventListener("submit", function() {
+            fbq('track', 'Lead');  // Trigger Facebook Pixel Lead event on form submission
+        });
 
         window.onload = function() {
             typeEffect();
