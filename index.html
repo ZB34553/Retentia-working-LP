@@ -116,37 +116,6 @@
             border-radius: 5px;
         }
 
-        /* Email Input Section */
-        .email-input-container {
-            margin-top: 30px;
-        }
-
-        .email-input {
-            padding: 12px 20px;
-            font-size: 1rem;
-            width: 300px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .email-submit {
-            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
-            background: linear-gradient(45deg, #FF8C00, #FFD700);
-            color: white;
-            font-weight: bold;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease;
-        }
-
-        .email-submit:hover {
-            background: linear-gradient(45deg, #FFD700, #FF8C00);
-        }
-
         /* About Us Widget */
         .about-us-widget {
             background-color: rgba(0, 0, 0, 0.7);
@@ -274,12 +243,6 @@
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
     </div>
 
-    <!-- Email CTA Section -->
-    <div class="email-input-container">
-        <input type="email" placeholder="Enter your email" class="email-input">
-        <button class="email-submit" onclick="submitEmail()">Submit</button>
-    </div>
-
     <!-- About Us Widget -->
     <div class="about-us-widget" onclick="openAboutUs()">
         About Us
@@ -289,7 +252,7 @@
     <div id="about-us-modal" class="about-us-modal">
         <div class="about-us-modal-content">
             <h2>Meet the Founders</h2>
-            <p>Tom and Zac, the founders of Retentia, are passionate about optimizing website performance using AI. Tom brings a technical vision to life, leveraging his skills in development and innovation. Zac has a keen eye for creating engaging, user-centric solutions and has a strong background in design. Together, they aim to revolutionize the way businesses optimize their website banners for maximum conversion.</p>
+            <p>Tom, an AI engineer from Oxford University, brings an in-depth understanding of artificial intelligence. Zac has spent the last three years overseeing and optimizing thousands of online e-commerce stores through his previous startup. Combining their expertise, they founded Retentia to revolutionize banner optimization with AI.</p>
             <button class="close-modal" onclick="closeAboutUs()">Close</button>
         </div>
     </div>
@@ -331,16 +294,6 @@
                 typingElement.innerHTML += text.charAt(i);
                 i++;
                 setTimeout(typeEffect, 100);
-            }
-        }
-
-        function submitEmail() {
-            const emailInput = document.querySelector(".email-input");
-            const email = emailInput.value;
-            if (email) {
-                window.location.href = `mailto:${email}`;
-            } else {
-                alert("Please enter a valid email.");
             }
         }
 
