@@ -173,6 +173,20 @@
             margin-bottom: 20px;
         }
 
+        .founder-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .founder-info img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
         .close-modal {
             font-size: 1.1rem;
             font-weight: bold;
@@ -189,33 +203,6 @@
             background: rgba(0, 0, 0, 0.7);
         }
 
-        /* Contact link */
-        .contact-link {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            font-size: 1rem;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            background: #FF8C00;
-            padding: 15px 25px;
-            border-radius: 50px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact-link:hover {
-            background: #FFD700;
-        }
-
-        .contact-link::after {
-            content: '💬';
-            margin-left: 10px;
-        }
-
         /* Mobile responsive styling */
         @media screen and (max-width: 600px) {
             .hero-text h1 {
@@ -227,6 +214,16 @@
                 font-size: 1rem;
             }
 
+            .founder-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .founder-info img {
+                width: 120px;
+                height: 120px;
+            }
+
             .bottom-left-symbol {
                 font-size: 0.7rem;
                 padding: 6px 10px;
@@ -234,10 +231,6 @@
 
             .email-input-container {
                 width: 80%;
-            }
-
-            .email-input {
-                width: 100%;
             }
 
             .about-us-widget {
@@ -285,6 +278,16 @@
     <div id="about-us-modal" class="about-us-modal">
         <div class="about-us-modal-content">
             <h2>Meet the Founders</h2>
+            <div class="founder-info">
+                <div>
+                    <img src="/images/Zac's photo.jpg" alt="Zac's picture">
+                    <p><strong>Zac</strong><br>Optimized thousands of e-commerce stores</p>
+                </div>
+                <div>
+                    <img src="/images/Tom's photo.jpg" alt="Tom's picture">
+                    <p><strong>Tom</strong><br>AI Engineer from Oxford University</p>
+                </div>
+            </div>
             <p>Tom, an AI engineer from Oxford University, brings an in-depth understanding of artificial intelligence. Zac has spent the last three years overseeing and optimizing thousands of online e-commerce stores through his previous startup. Combining their expertise, they founded Retentia to revolutionize banner optimization with AI.</p>
             <button class="close-modal" onclick="closeAboutUs()">Close</button>
         </div>
