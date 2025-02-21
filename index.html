@@ -55,7 +55,6 @@
             transform: translateY(20px);
             animation: fadeIn ease-out 1s forwards;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -69,25 +68,21 @@
             align-items: center;
             margin-top: 80px;
         }
-
         .hero-text h1 {
             font-size: 3rem;
             font-weight: bold;
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-align: center;
             margin: 0;
-            padding: 0;
         }
-
         .hero-text p {
             font-size: 1.2rem;
             margin-top: 20px;
             opacity: 0.8;
         }
 
-        /* Custom CTA Button Color */
+        /* CTA Button */
         .cta-button {
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             background: linear-gradient(45deg, #FF8C00, #FFD700);
@@ -98,7 +93,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease;
         }
-
         .cta-button:hover {
             background: linear-gradient(45deg, #FFD700, #FF8C00);
         }
@@ -116,7 +110,7 @@
             border-radius: 5px;
         }
 
-        /* About Us Widget */
+        /* About Us Widget (bottom-right) */
         .about-us-widget {
             background-color: rgba(0, 0, 0, 0.7);
             color: #FFD700;
@@ -124,12 +118,10 @@
             border-radius: 50px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             cursor: pointer;
-            margin-top: 30px;
             position: fixed;
             bottom: 20px;
             right: 20px;
         }
-
         .about-us-widget:hover {
             background-color: rgba(0, 0, 0, 0.9);
         }
@@ -150,15 +142,14 @@
             z-index: 1001;
             padding: 20px;
         }
-
         .about-us-modal-content {
             background: rgba(0, 0, 0, 0.8);
             padding: 40px;
             border-radius: 10px;
             max-width: 600px;
             text-align: center;
+            position: relative;
         }
-
         .about-us-modal h2 {
             font-size: 2rem;
             margin-bottom: 15px;
@@ -166,96 +157,70 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .about-us-modal p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
         .founder-info {
             display: flex;
             justify-content: center;
             gap: 40px;
             margin-bottom: 20px;
         }
-
         .founder-info img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
         }
-
-        .close-modal {
+        .about-us-modal p {
             font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            color: #FF8C00;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border-radius: 5px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .close-modal-x {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
             border: none;
-            transition: background 0.3s ease;
+            font-size: 24px;
+            color: #FFD700;
+            cursor: pointer;
         }
 
-        .close-modal:hover {
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        /* Mobile responsive styling */
-        @media screen and (max-width: 600px) {
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .cta-button {
-                padding: 12px 15px;
-                font-size: 1rem;
-            }
-
-            .founder-info {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .founder-info img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .bottom-left-symbol {
-                font-size: 0.7rem;
-                padding: 6px 10px;
-            }
-
-            .email-input-container {
-                width: 80%;
-            }
-
-            .about-us-widget {
-                font-size: 0.9rem;
-                padding: 10px;
-            }
-
-            .email-input-container {
-                width: 100%;
-            }
-        }
-
-        /* Custom Styling for the Join Waitlist Modal Title */
+        /* Join Waitlist Modal */
         #waitlist-modal .text-2xl {
             background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Mobile Styles */
+        @media screen and (max-width: 600px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .cta-button {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+            .founder-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .founder-info img {
+                width: 120px;
+                height: 120px;
+            }
+            .bottom-left-symbol {
+                font-size: 0.7rem;
+                padding: 6px 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Particle.js Background for Moving Stars -->
+    <!-- Particle.js Background -->
     <div id="particles-js"></div>
 
-    <!-- Sticky Navigation Bar -->
+    <!-- Sticky Header -->
     <header class="sticky-header">
         <h1 class="logo">Retentia</h1>
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button">
@@ -263,7 +228,7 @@
         </button>
     </header>
 
-    <!-- Hero Section with Dynamic Background -->
+    <!-- Hero Text -->
     <div class="hero-text fade-in">
         <h1 id="typing"></h1>
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
@@ -277,26 +242,31 @@
     <!-- About Us Modal -->
     <div id="about-us-modal" class="about-us-modal">
         <div class="about-us-modal-content">
+            <button class="close-modal-x" onclick="closeAboutUs()">×</button>
             <h2>Meet the Founders</h2>
             <div class="founder-info">
                 <div>
-                    <img src="Zac's photo.png" alt="Zac's picture">
-                    <p> Zac
+                    <img src="/images/Zac-photo.png" alt="Zac's picture">
+                    <p><strong>Zac</strong></p>
                 </div>
                 <div>
-                    <img src="Tom's photo.png" alt="Tom's picture">
-                     <p> Tom
+                    <img src="/images/Tom-photo.png" alt="Tom's picture">
+                    <p><strong>Tom</strong></p>
                 </div>
             </div>
-            <p>Tom, an AI engineer from Oxford University, brings an in-depth understanding of artificial intelligence. Zac has spent the last three years overseeing and optimizing thousands of online e-commerce stores through his previous startup. Combining their expertise, they founded Retentia to revolutionize banner optimization with AI.</p>
-            <button class="close-modal" onclick="closeAboutUs()">Close</button>
+            <p>
+                Tom, an AI engineer from Oxford University, brings an in-depth understanding of artificial intelligence. 
+                Zac has spent the last three years overseeing and optimizing thousands of online e-commerce 
+                stores through his previous startup. Combining their expertise, they founded Retentia to revolutionize 
+                banner optimization with AI.
+            </p>
         </div>
     </div>
 
     <!-- Join Waitlist Modal -->
     <div id="waitlist-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
-            <h2 class="text-2xl font-bold">Join the Waitlist</h2> <!-- Updated color -->
+            <h2 class="text-2xl font-bold">Join the Waitlist</h2>
             <p class="mt-2 text-gray-700">Secure your spot now and gain early access benefits!</p>
             <form action="https://formsubmit.co/zachariababecoff@gmail.com" method="POST" class="mt-4">
                 <input type="email" name="email" required placeholder="Enter your email" class="p-3 border rounded-md w-full text-gray-900 text-lg">
@@ -337,7 +307,7 @@
         }
 
         window.onload = function() {
-            typeEffect(); // Start typing effect once window loads
+            typeEffect();
             particlesJS('particles-js', {
                 particles: {
                     number: {
