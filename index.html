@@ -8,9 +8,6 @@
     <meta name="keywords" content="A/B Testing, AI Optimization, Retentia, Banner Testing">
     <meta name="author" content="Your Name">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <style>
@@ -119,6 +116,37 @@
             border-radius: 5px;
         }
 
+        /* Email Input Section */
+        .email-input-container {
+            margin-top: 30px;
+        }
+
+        .email-input {
+            padding: 12px 20px;
+            font-size: 1rem;
+            width: 300px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-submit {
+            background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
+            background: linear-gradient(45deg, #FF8C00, #FFD700);
+            color: white;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .email-submit:hover {
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+        }
+
         /* Contact link */
         .contact-link {
             position: fixed;
@@ -176,6 +204,14 @@
                 font-size: 0.7rem;
                 padding: 6px 10px;
             }
+
+            .email-input-container {
+                width: 80%;
+            }
+
+            .email-input {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -195,6 +231,12 @@
     <div class="hero-text fade-in">
         <h1 id="typing"></h1>
         <p>Retentia automatically tests and optimizes homepage banners to maximize conversions.</p>
+    </div>
+
+    <!-- Email CTA Section -->
+    <div class="email-input-container">
+        <input type="email" placeholder="Enter your email" class="email-input">
+        <button class="email-submit" onclick="submitEmail()">Submit</button>
     </div>
 
     <!-- Join Waitlist Modal -->
@@ -234,6 +276,16 @@
                 typingElement.innerHTML += text.charAt(i);
                 i++;
                 setTimeout(typeEffect, 100);
+            }
+        }
+
+        function submitEmail() {
+            const emailInput = document.querySelector(".email-input");
+            const email = emailInput.value;
+            if (email) {
+                window.location.href = `mailto:${email}`;
+            } else {
+                alert("Please enter a valid email.");
             }
         }
 
