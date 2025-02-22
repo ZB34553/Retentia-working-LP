@@ -248,7 +248,7 @@
     <!-- Sticky Header -->
     <header class="sticky-header">
         <h1 class="logo">Retentia</h1>
-        <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button" id="join-waitlist-widget">
+        <button onclick="openAboutUs()" class="cta-button" id="join-waitlist-widget">
             Join Waitlist
         </button>
     </header>
@@ -304,6 +304,16 @@
     </div>
 
     <script>
+        // Open About Us Modal
+        function openAboutUs() {
+            document.getElementById('about-us-modal').style.display = 'flex';
+        }
+
+        // Close About Us Modal
+        function closeAboutUs() {
+            document.getElementById('about-us-modal').style.display = 'none';
+        }
+
         window.onload = function() {
             particlesJS('particles-js', {
                 particles: {
