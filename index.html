@@ -13,34 +13,6 @@
     <link rel="icon" href="favicon-48x48.png" sizes="48x48" type="image/png">
     <link rel="apple-touch-icon" href="apple-icon-180x180.png" sizes="180x180">
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRB1NXRGQ9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GRB1NXRGQ9');
-</script>
-    
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '651792270580399');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=651792270580399&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <style>
@@ -318,7 +290,8 @@ src="https://www.facebook.com/tr?id=651792270580399&ev=PageView&noscript=1"
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
             <h2 class="text-2xl font-bold">Join the Waitlist</h2>
             <p class="mt-2 text-gray-700">Secure your spot now and gain early access benefits!</p>
-            <form action="https://formsubmit.co/zachariababecoff@gmail.com" method="POST" class="mt-4" id="waitlistForm">
+            <!-- Formspree Integration -->
+            <form action="https://formspree.io/f/mrbedrbr" method="POST" class="mt-4">
                 <input type="email" name="email" required placeholder="Enter your email" class="p-3 border rounded-md w-full text-gray-900 text-lg">
                 <button type="submit" class="cta-button mt-3 w-full">
                     Join Now
@@ -331,38 +304,7 @@ src="https://www.facebook.com/tr?id=651792270580399&ev=PageView&noscript=1"
     </div>
 
     <script>
-        /* Typing Effect */
-        const text = "AI-Driven Banner Optimization";
-        let i = 0;
-        function typeEffect() {
-            const typingElement = document.getElementById("typing");
-            if (i < text.length) {
-                typingElement.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeEffect, 100);
-            }
-        }
-
-        function openAboutUs() {
-            document.getElementById('about-us-modal').style.display = 'flex';
-        }
-
-        function closeAboutUs() {
-            document.getElementById('about-us-modal').style.display = 'none';
-        }
-
-        // Track when users click the "Join Waitlist" widget
-        document.getElementById("join-waitlist-widget").addEventListener("click", function() {
-            fbq('track', 'Lead');  // Track the Lead event when the widget is clicked
-        });
-
-        // Facebook Pixel Event on Waitlist Form Submission
-        document.getElementById("waitlistForm").addEventListener("submit", function() {
-            fbq('track', 'Lead');  // Trigger Facebook Pixel Lead event on form submission
-        });
-
         window.onload = function() {
-            typeEffect();
             particlesJS('particles-js', {
                 particles: {
                     number: {
