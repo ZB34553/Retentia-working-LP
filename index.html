@@ -316,18 +316,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-        // Typing Effect
-        const text = "AI-Driven Banner Optimization";
+    <script>
+        
+  // Typing Effect
+        const text = "AI-Driven Banner Optimization";  // The text you want to appear
         let i = 0;
         function typeEffect() {
             const typingElement = document.getElementById("typing");
             if (i < text.length) {
                 typingElement.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeEffect, 100);
+                setTimeout(typeEffect, 100);  // Adjust speed (100ms between each character)
             }
-
-    <script>
+        }
         // Open About Us Modal
         function openAboutUs() {
             document.getElementById('about-us-modal').style.display = 'flex';
