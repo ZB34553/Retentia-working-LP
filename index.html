@@ -179,12 +179,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             position: relative;
         }
 
-        .about-us-modal h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            background: -webkit-linear-gradient(45deg, #FFD700, #FF8C00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    .about-us-modal h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         }
 
         /* Founder Info */
@@ -314,8 +314,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
         
 .coming-soon-text {
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker semi-transparent background */
-    color: #FFD700; /* Golden text for visibility */
+    background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700); /* Gradient from orange to gold */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent so the gradient shows */
     font-size: 0.9rem; /* Smaller font size */
     padding: 6px 14px; /* Adjust padding to make the box smaller */
     border-radius: 25px; /* Oval shape for more elegance */
@@ -328,6 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     margin-top: 5px; /* Space between button and text */
     animation: fadeInText 1s ease-out; /* Optional fade-in effect */
 }
+        
 @keyframes fadeInText {
     from {
         opacity: 0;
