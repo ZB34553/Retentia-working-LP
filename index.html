@@ -49,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background: transparent;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             z-index: 1000;
             backdrop-filter: blur(10px);
@@ -121,7 +121,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-button {
         padding: 12px 40px; /* Slightly larger padding on mobile */
         font-size: 1.1rem; /* Optionally increase the font size for mobile */
-    }}
+    }
+             .coming-soon-text {
+        font-size: 0.75rem; /* Smaller font size for mobile */
+    }
+        }
 
         .cta-button:hover {
             background: linear-gradient(45deg, #FFD700, #FF8C00);
@@ -323,17 +327,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     background: -webkit-linear-gradient(45deg, #FF8C00, #FFD700); /* Gradient from orange to gold */
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Make the text transparent so the gradient shows */
-    font-size: 0.9rem; /* Smaller font size */
-    padding: 6px 14px; /* Adjust padding to make the box smaller */
+    font-size: 0.8rem; /* Smaller font size */
+    padding: 5px 12px; /* Adjust padding to make the box smaller */
     border-radius: 25px; /* Oval shape for more elegance */
     display: inline-block; /* Make it adjust based on content */
     font-style: italic; /* Italics for a softer, stylish look */
     font-weight: normal; /* Keep it lighter for better readability */
     text-transform: uppercase; /* Make it all caps for emphasis */
     letter-spacing: 1px; /* Slightly spaced letters for style */
+    display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     margin-top: 5px; /* Space between button and text */
     animation: fadeInText 1s ease-out; /* Optional fade-in effect */
+    text-align: center;
 }
         
 @keyframes fadeInText {
