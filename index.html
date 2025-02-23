@@ -289,17 +289,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
          /* Coming Soon Speech Bubble */
-    .coming-soon-bubble {
+   .coming-soon-bubble {
     position: fixed;
-    top: 20px; /* Position at the top */
+    bottom: 20px; /* Keep it at the bottom */
     right: 20px; /* Align to the right */
-    background-color: #FF8C00; /* Vibrant color (you can change this) */
+    background-color: #FF8C00; /* Vibrant color for visibility */
     color: white;
     font-weight: bold;
     padding: 10px 20px;
-    border-radius: 20px; /* Create an oval-like appearance */
+    border-radius: 20px; /* Oval-like shape */
     font-size: 1.2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add some depth */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Depth for a 3D effect */
     display: flex;
     align-items: center;
 }
@@ -307,13 +307,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .coming-soon-bubble::after {
     content: '';
     position: absolute;
-    bottom: -15px; /* Position the "tail" */
-    right: 20px; /* Position the "tail" towards the right */
+    bottom: -15px; /* Position the "tail" right beneath the bubble */
+    right: 20px; /* Tail aligned with the bubble */
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 15px solid #FF8C00; /* Same as the background color */
+    border-top: 15px solid #FF8C00; /* Same color as the bubble background */
 }
 
 </style>
