@@ -46,13 +46,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     position: fixed;
     bottom: 20px;
     right: 20px;
-    color: #FFD700; /* Adjust color to your theme */
+    color: #FFD700;  /* Text color */
     font-size: 1rem;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 8px 16px;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);  /* Bubble background color */
+    padding: 12px 20px;
+    border-radius: 15px;  /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);  /* Optional shadow */
 }
+
+/* Triangle to create speech bubble effect */
+.bottom-right-coming-soon::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0, 0, 0, 0.7);  /* Color of the bubble triangle */
+}
+
 
         /* Sticky Top Menu */
         .sticky-header {
@@ -150,6 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             cursor: pointer;
             position: fixed;
+            font-weight: bold;
             bottom: 20px;
             left: 20px;
             font-size: 1.0rem;
