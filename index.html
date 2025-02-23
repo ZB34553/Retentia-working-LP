@@ -288,34 +288,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
     }
 
-         /* Coming Soon Speech Bubble */
-   .coming-soon-bubble {
-    position: fixed;
-    bottom: 20px; /* Keep it at the bottom */
-    right: 20px; /* Align to the right */
-    background-color: #FF8C00; /* Vibrant color for visibility */
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 20px; /* Oval-like shape */
-    font-size: 1.2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Depth for a 3D effect */
-    display: flex;
-    align-items: center;
+.coming-soon-text {
+    margin-top: 10px; /* Slight gap below the "Get Early Access" button */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #FFD700; /* Golden text for visibility */
+    font-size: 0.9rem; /* Smaller text size */
+    padding: 8px 20px; /* Padding for a nice rounded box */
+    border-radius: 20px; /* Rounded corners for the text box */
+    width: auto; /* Adjust width to fit content */
+    text-align: center; /* Centered text */
+    display: inline-block; /* Inline block to adjust size based on content */
 }
-
-.coming-soon-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -15px; /* Position the "tail" right beneath the bubble */
-    right: 20px; /* Tail aligned with the bubble */
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid #FF8C00; /* Same color as the bubble background */
-}
-
+        
 </style>
 
     <!-- About Us Widget -->
@@ -468,10 +452,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         };
     </script>
 
-    <!-- Coming Soon Section -->
-<div class="coming-soon-bubble">
+<!-- Get Early Access Button -->
+<button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button" id="join-waitlist-widget">
+    Get Early Access
+</button>
+
+<!-- Coming Soon Text Box (Below the button) -->
+<div class="coming-soon-text">
     <span>Coming Soon</span>
 </div>
-
 </body>
 </html>
