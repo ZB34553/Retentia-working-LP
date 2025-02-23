@@ -304,12 +304,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
         
 .coming-soon-text {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker semi-transparent background */
     color: #FFD700; /* Golden text for visibility */
-    font-size: 0.9rem; /* Slightly smaller text size */
-    padding: 5px 15px; /* Padding for the box */
-    border-radius: 15px; /* Round the corners of the box */
+    font-size: 1rem; /* Adjust font size */
+    padding: 8px 20px; /* Padding for the box */
+    border-radius: 25px; /* Oval shape for more elegance */
     display: inline-block; /* Make it adjust based on content */
+    font-style: italic; /* Italics for a softer, stylish look */
+    font-weight: normal; /* Keep it lighter for better readability */
+    text-transform: uppercase; /* Make it all caps for emphasis */
+    letter-spacing: 1px; /* Slightly spaced letters for style */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    margin-top: 5px; /* Space between button and text */
+    animation: fadeInText 1s ease-out; /* Optional fade-in effect */
+}
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #join-waitlist-widget {
