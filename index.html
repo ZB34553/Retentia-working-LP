@@ -41,37 +41,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             position: relative;
         }
 
-        /* Bottom Right Coming Soon Section */
-.bottom-right-coming-soon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: #FFD700;  /* Text color */
-    font-size: 1rem;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.7);  /* Bubble background color */
-    padding: 12px 20px;
-    border-radius: 15px;  /* Rounded corners */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);  /* Optional shadow */
-}
-
-/* Triangle to create speech bubble effect */
-.bottom-right-coming-soon::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    right: 20px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid rgba(0, 0, 0, 0.7);  /* Color of the bubble triangle */
-}
-
-
         /* Sticky Top Menu */
         .sticky-header {
             position: fixed;
@@ -303,6 +272,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1 id="typing"></h1>
         <p>Drag and drop banners to test. Our AI dynamically optimizes the best image for each visitor to boost conversions.</p>
     </div>
+    
+    <style>
+    .hero-text-paragraph {
+        padding: 0 20px; /* Add padding to left and right */
+        max-width: 80%; /* Set a max width to prevent the text from going edge-to-edge */
+        margin: 0 auto; /* Center the text */
+    }
+
+    /* Mobile Styles */
+    @media screen and (max-width: 600px) {
+        .hero-text-paragraph {
+            max-width: 90%; /* For mobile, reduce max-width further */
+        }
+    }
+
+         /* Coming Soon Speech Bubble */
+    .bottom-right-coming-soon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: #FFD700;
+        font-size: 1rem;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        border-radius: 30px; /* Oval shape */
+        display: inline-block;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .bottom-right-coming-soon:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid rgba(0, 0, 0, 0.7); /* Triangle */
+    }
+</style>
 
     <!-- About Us Widget -->
     <div class="about-us-widget" onclick="openAboutUs()">
