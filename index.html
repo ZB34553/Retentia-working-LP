@@ -115,12 +115,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 12px 30px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease;
+            display: inline-block;
         }
      
-        @media screen and (max-width: 600px) {
-    .cta-button {
-        padding: 12px 40px; /* Slightly larger padding on mobile */
-        font-size: 1.1rem; /* Optionally increase the font size for mobile */
+     @media screen and (max-width: 600px) {
+    .cta-button, .coming-soon-text {
+        padding: 12px 40px;
+        font-size: 1rem;
     }}
 
         .cta-button:hover {
@@ -324,7 +325,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Make the text transparent so the gradient shows */
     font-size: 0.9rem; /* Smaller font size */
-    padding: 6px 14px; /* Adjust padding to make the box smaller */
+    padding: 6px 30px; /* Adjust padding to make the box smaller */
     border-radius: 25px; /* Oval shape for more elegance */
     display: inline-block; /* Make it adjust based on content */
     font-style: italic; /* Italics for a softer, stylish look */
@@ -334,6 +335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     margin-top: 5px; /* Space between button and text */
     animation: fadeInText 1s ease-out; /* Optional fade-in effect */
+    text-align: center; /* Center the text */
 }
         
 @keyframes fadeInText {
