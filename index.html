@@ -291,7 +291,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="top-right-section">
         <!-- Get Early Access Button -->
         <button onclick="document.getElementById('waitlist-modal').classList.remove('hidden')" class="cta-button" id="join-waitlist-widget">
-            Learn more
+            Get Early Access
         </button>
 
         <!-- Coming Soon Text Box -->
@@ -304,7 +304,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Hero Text -->
     <div class="hero-text fade-in">
         <h1 id="typing"></h1>
-         <p class="hero-text-paragraph"> Retentia increases conversions by continuously testing and optimizing your homepage banner while directing traffic to top performers</p>
+         <p class="hero-text-paragraph"> Retentia increases conversions by continuously personalising and optimizing your homepage banner to differen</p>
     </div>
     
     <style>
@@ -396,28 +396,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <!-- Join Waitlist Modal -->
-    <div id="waitlist-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
-            <h2 class="text-2xl font-bold">Stay Updated</h2>
-            <p class="mt-2 text-gray-700"> Get more details on how Retentia works!</p>
-            <!-- Formspree Integration -->
-            <form action="https://formspree.io/f/mrbedrbr" method="POST" class="mt-4">
-                <input type="email" name="email" required placeholder="Enter your email" class="p-3 border rounded-md w-full text-gray-900 text-lg">
-                <button type="submit" class="cta-button mt-3 w-full">
-                    Submit
-                </button>
-            </form>
-            <button onclick="document.getElementById('waitlist-modal').classList.add('hidden')" class="mt-4 text-gray-500">
-                Close
+<!-- Join Waitlist Modal -->
+<div id="waitlist-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
+        <h2 class="text-2xl font-bold">Get Early Access – Boost Conversions First!</h2>
+        <p class="mt-2 text-gray-700">Join early to get priority access, free A/B tests, and exclusive insights on boosting conversions!</p>
+        <!-- Formspree Integration -->
+        <form action="https://formspree.io/f/mrbedrbr" method="POST" class="mt-4">
+            <input type="email" name="email" required placeholder="Enter your email" class="p-3 border rounded-md w-full text-gray-900 text-lg">
+            <button type="submit" class="cta-button mt-3 w-full bg-blue-600 text-white p-3 rounded-lg text-lg hover:bg-blue-700 transition">
+                Get Early Access Now! 🚀
             </button>
-        </div>
+        </form>
+        <button onclick="document.getElementById('waitlist-modal').classList.add('hidden')" class="mt-4 text-gray-500 hover:text-gray-700 transition">
+            Maybe Later
+        </button>
     </div>
+</div>
+
 
     <script>
         
   // Typing Effect
-        const text = "Automate Homepage Banner Testing";  // The text you want to appear
+        const text = "AI Optimized Banners – More Conversions, Less Guesswork!";  // The text you want to appear
         let i = 0;
         function typeEffect() {
             const typingElement = document.getElementById("typing");
