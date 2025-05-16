@@ -74,7 +74,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .top-right-section {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: center;
+        }
 
+    @media screen and (max-width: 600px) {
+    .top-right-section {
+        right: 30px; /* Moves the button slightly more to the left for mobile */
+        top: 20px; /* Adjust the top position to fit mobile screens better */
+    }
+
+    .cta-button {
+        padding: 12px 40px; /* Adjust button padding for mobile screens */
+    }
+        }   
         /* Hero Text */
         .hero-text {
             display: flex;
@@ -307,69 +323,107 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <p class="hero-text-paragraph">  Retentia's AI personalizes your site's messaging for every visitor - autonomously testing and learning to drive higher conversions.
  </p>
     </div>
-    
-    <style>
+    <!-- Revenue Uplift Calculator Widget -->
+    <div class="calculator-widget" onclick="openCalculator()">
+        Revenue Calculator
+    </div>
 
-    /* Mobile Styles */
-    @media screen and (max-width: 600px) {
-        .hero-text-paragraph {
-            max-width: 90%; /* For mobile, reduce max-width further */
+    <!-- Revenue Uplift Calculator Modal -->
+    <div id="calculator-modal" class="calculator-modal">
+        <div class="calculator-modal-content">
+            <button class="close-modal-x" onclick="closeCalculator()">×</button>
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+                Calculate Your Revenue Uplift
+            </h2>
+            <p class="mb-8">
+                See how much additional revenue Retentia can unlock for your store by reducing bounce rates.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <input id="traffic" type="number" placeholder="Monthly Traffic" class="p-3 w-full text-gray-900 rounded-lg">
+                    <input id="bounceRate" type="number" placeholder="Current Bounce Rate (%)" class="p-3 w-full mt-4 text-gray-900 rounded-lg">
+                    <input id="conversionRate" type="number" placeholder="Conversion Rate (%)" class="p-3 w-full mt-4 text-gray-900 rounded-lg">
+                    <input id="aov" type="number" placeholder="Average Order Value ($)" class="p-3 w-full mt-4 text-gray-900 rounded-lg">
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <button onclick="calculateRevenue()" class="cta-button mt-4">Calculate Uplift 🚀</button>
+                    <div id="result" class="mt-6 text-lg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateRevenue() {
+            const traffic = document.getElementById('traffic').value;
+            const bounceRate = document.getElementById('bounceRate').value / 100;
+            const conversionRate = document.getElementById('conversionRate').value / 100;
+            const aov = document.getElementById('aov').value;
+
+            // Calculate extra visitors retained
+            const newBounceRate = bounceRate - (bounceRate * 0.1);
+            const extraVisitors = traffic * (bounceRate - newBounceRate);
+
+            // Calculate additional revenue
+            const additionalConversions = extraVisitors * conversionRate;
+            const additionalRevenue = additionalConversions * aov;
+
+            // Display the result
+            document.getElementById('result').innerText = `💰 Estimated Uplift: $${additionalRevenue.toLocaleString()}`;
         }
-    }
-        
-.top-right-section {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    text-align: center;
-}
-    @media screen and (max-width: 600px) {
-    .top-right-section {
-        right: 30px; /* Moves the button slightly more to the left for mobile */
-        top: 20px; /* Adjust the top position to fit mobile screens better */
-    }
+    </script>
 
-    .cta-button {
-        padding: 12px 40px; /* Adjust button padding for mobile screens */
-    }
-}
-        
-.coming-soon-text {
-    background: -webkit-linear-gradient(45deg, #8A2BE2, #FF69B4); /* Gradient from purple to pink */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    -webkit-text-fill-color: transparent; /* Make the text transparent so the gradient shows */
-    font-size: 0.8rem; /* Smaller font size */
-    padding: 5px 12px; /* Adjust padding to make the box smaller */
-    border-radius: 25px; /* Oval shape for more elegance */
-    display: inline-block; /* Make it adjust based on content */
-    font-style: italic; /* Italics for a softer, stylish look */
-    font-weight: normal; /* Keep it lighter for better readability */
-    text-transform: uppercase; /* Make it all caps for emphasis */
-    letter-spacing: 1px; /* Slightly spaced letters for style */
-    display: inline-block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    margin-top: 5px; /* Space between button and text */
-    animation: fadeInText 1s ease-out; /* Optional fade-in effect */
-    text-align: center;
-}
-        
-@keyframes fadeInText {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    <script>
+        function openCalculator() {
+            document.getElementById('calculator-modal').style.display = 'flex';
+        }
 
-#join-waitlist-widget {
-    display: block;
-    margin-bottom: 5px; /* Space between the button and the text */
-}
-        
-</style>
+        function closeCalculator() {
+            document.getElementById('calculator-modal').style.display = 'none';
+        }
+    </script>
+
+    <style>
+        .calculator-widget {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #FF69B4;
+            padding: 12px 22px;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            position: fixed;
+            font-weight: bold;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.0rem;
+        }
+
+        .calculator-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #FF69B4;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            padding: 20px;
+        }
+
+        .calculator-modal-content {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+    </style>
 
     <!-- About Us Widget -->
     <div class="about-us-widget" onclick="openAboutUs()">
